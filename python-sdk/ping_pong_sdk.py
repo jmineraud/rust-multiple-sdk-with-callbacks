@@ -55,7 +55,7 @@ class PingPong:
 # Then we can test the library
 
 
-print(hello("from the Rust native library"))
+print(hello("from the Rust native library called by the Python SDK"))
 
 start_value = 0
 trigger_value = 3

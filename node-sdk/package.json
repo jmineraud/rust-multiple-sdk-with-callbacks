@@ -1,0 +1,15 @@
+{
+   "name": "ping-pong-sdk",
+   "version": "0.1.0",
+   "description": "A Node.js SDK for the Ping Pong Rust library",
+   "main": "ping-pong-sdk.js",
+   "scripts": {
+      "start": "node ping-pong-sdk.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "author": "Julien Mineraud <julien.mineraud@gmail.com>",
+   "license": "MIT",
+   "dependencies": {
+      "ffi": "~2.2.0"
+   }
+}
