@@ -1,0 +1,11 @@
+[package]
+name = "mylib"
+version = "0.1.0"
+authors = ["Julien Mineraud <julien.mineraud@gmail.com>"]
+publish = false
+
+[dependencies]
+
+[lib]
+name = "mylib"
+crate-type = ["dylib"]
