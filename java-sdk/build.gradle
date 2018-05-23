@@ -1,0 +1,19 @@
+group 'com.mineraud.pingpong'
+version '0.1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
+
+test {
+    systemProperties 'java.library.path': '../rust-lib/target/release/'
+}
+
+mainClassName = 'com.mineraud.pingpong.PingPongSdk'
