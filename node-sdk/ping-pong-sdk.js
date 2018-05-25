@@ -2,7 +2,7 @@
 
 const ffi = require('ffi');
 
-const lib = ffi.Library('/home/mineraud/Workspace/rust-multiple-sdk-with-callbacks/rust-lib/target/release/libmylib', {
+const lib = ffi.Library('../rust-lib/target/release/libmylib', {
     hello_world: ['string', ['string']],
     ping_pong_new: ['pointer', ['int', 'int']],
     ping_pong_free: ['void', ['pointer']],

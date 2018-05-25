@@ -5,7 +5,17 @@ authors = ["Julien Mineraud <julien.mineraud@gmail.com>"]
 publish = false
 
 [dependencies]
+jni = { version = "0.10.1", default-features = false, optional = true }
 
 [lib]
 name = "mylib"
 crate-type = ["dylib"]
+
+[features]
+# no features by default
+default = []
+
+# Add feature "java" here, then you can use it.
+# Our "java" feature depends on the jni crate.
+java = ["jni"]
+

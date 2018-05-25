@@ -59,9 +59,9 @@ public class PingPongSdk {
 	StringBuilder sb = new StringBuilder("[");
 	boolean isFirst = true;
 	for (int v : list) {
-	    sb.append(v);
 	    if (isFirst) isFirst = false;
 	    else sb.append(",");
+	    sb.append(v);
 	}
 	sb.append("]");
 	return sb.toString();
@@ -70,7 +70,7 @@ public class PingPongSdk {
     public static void main(String[] args) {
 	System.out.println(hello("from the native Rust library called by the Java SDK"));
 	int startValue = 0;
-	int triggerValue = 0;
+	int triggerValue = 3;
 	int numberOfPings = 11;
 	final PingPongSdk pingPongSdk = new PingPongSdk(startValue, triggerValue);
 	final List<Integer> triggeredForValues = new ArrayList<Integer>();
@@ -80,6 +80,9 @@ public class PingPongSdk {
 		    triggeredForValues.add(value);
 		}
 	    });
+	for (int i = 0; i < numberOfPings; i++) {
+	    pingPongSdk.ping();
+	}
 	pingPongSdk.destroy();
 	System.out.println(String.format(Locale.ENGLISH,
 					 "With start at %d, trigger at %d and %d number of pings, here are the values that produced a trigger -> %s",

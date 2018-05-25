@@ -14,4 +14,10 @@ if [ ! -d node_modules ]; then
 fi
 npm start
 
+cd ../rust-lib
+cargo build --release --features "java"
+
+cd ../java-sdk
+./gradlew run -q
+
 echo "Completed the test"

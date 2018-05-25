@@ -6,6 +6,7 @@ This project aims to create a simple native library to be used inside multiple S
 * Install Rust and Cargo (tested with cargo 0.25.0 and rustc v1.24.1)
 * Install Python 3       (tested with 3.5.2)
 * Install Node.js        (tested with 6.11.3)
+* Install Java		 (tested with 1.8.0 but code is compative with 1.7)
 
 ## Run
 

@@ -16,4 +16,8 @@ test {
     systemProperties 'java.library.path': '../rust-lib/target/release/'
 }
 
+run {
+    systemProperties 'java.library.path': '../rust-lib/target/release/'
+}
+
 mainClassName = 'com.mineraud.pingpong.PingPongSdk'
